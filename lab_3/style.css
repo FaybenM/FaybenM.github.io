@@ -19,10 +19,8 @@ body {
 /* || typography */
 
 h1, h2, h3 {
-  font-family: 'Special Elite', cursive;
+  font-family: 'Arima Madurai', cursive;
   color: #2a2a2a;
-  font-weight: lighter;
-  font-weight: 300;
 }
 
 p, input, li {

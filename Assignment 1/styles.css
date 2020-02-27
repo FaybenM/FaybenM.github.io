@@ -1,19 +1,41 @@
+/* || General setup */
+
 html, body {
     margin: 0;
     padding: 0;
   }
   
-  html {
+html {
     font-size: 10px;
-   
-  }
-  
-  header{
-
+    background-color:#334059;
 }
 
-.wrapper{
+body {
+    width: 70%;
+    min-width: 800px;
+    margin: 0 auto;
+  }
+  /* || header layout */
+  
+header{
+    margin-bottom: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    background-color:#2D2D5E;
+}
 
+h1 {
+    flex: 5;
+    text-transform: uppercase;
+    font-family: 'Simonetta', ;
+    color: #8970B5;
+    text-align: left;
+}
+
+  /* || main layout */
+
+.wrapper{
+    display: flex;
 }
 
 .container{
@@ -28,7 +50,7 @@ html, body {
 
 }
 
-h1, h2{
+h2{
 
 }
 

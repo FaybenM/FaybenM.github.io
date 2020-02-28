@@ -7,7 +7,7 @@ html, body {
   
 html {
     font-size: 10px;
-    background-color:#53573F;
+    background-color:#733027;
 }
 
 body {
@@ -21,43 +21,50 @@ header{
     margin-bottom: 10px;
     display: flex;
     flex-flow: row wrap;
-    background-color:#B89256;
+    background-color:#394D43;
 }
 
 h1 {
     flex: 5;
     text-transform: uppercase;
     font-family: 'Simonetta', cursive;
-    color: #BAA956;
+    color: #56A27D;
     text-align: left;
+    font-size: 3cm;
 }
 
   /* || main layout */
 
 .wrapper{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .container{
     min-width: 960px;
 }
 
-.image, p{
+.image{
     display: block;
-    border: 1px;
+    border: 1px solid, #FF9F91;
     border-radius: 25px;
     padding: 4px;
 }
 
-.list, p{
+.list{
     display: block;
-    background-color: #B05353;
+    background-color: #B86256;
+}
+
+p{
+    display: block;
+    background-color: #B86256;
 }
 
 h2{
     flex: 5;
     font-family: 'Simonetta', cursive;
-    color: #BD7757;
+    color: #FF9F91;
     text-align: center;
     font-size: 1.2cm;
 }
@@ -69,11 +76,12 @@ h2{
     font-size: .8cm;
     margin-bottom: 2px;
     letter-spacing: 0.02rem;
-    color: #BD7757;
+    color: #FF9F91;
 }
 
 div{
     display: block;
+    align-items: center;
 }
 
 .desc, p{
@@ -82,7 +90,7 @@ div{
     font-size: .4cm;
     margin-bottom: 2px;
     letter-spacing: 0.02rem;
-    color: #BD7757;
+    color: #FF9F91;
 }
 
 .respons{
@@ -91,7 +99,7 @@ div{
     font-size: .4cm;
     margin-bottom: 2px;
     letter-spacing: 0.02rem;
-    color: #BD7757;
+    color: #FF9F91;
 }
 
 ol{

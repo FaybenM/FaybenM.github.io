@@ -1,0 +1,122 @@
+/* || General setup */
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+html {
+    font-size: 10px;
+    background-color:#733027;
+}
+
+body {
+    min-width: 1000px;
+    margin: 0 auto;
+  }
+  /* || header layout */
+  
+header{
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    background-color:#394D43;
+    padding: 15px;
+}
+
+h1 {
+    flex: 5;
+    font-family: 'Simonetta', cursive;
+    color: #56A27D;
+    text-align: left;
+    font-size: 1.8cm;
+}
+
+  /* || main layout */
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 960px;
+    margin: auto;
+    width: 10%;
+}
+
+.container{
+    min-width: 960px;
+    display: flex;
+}
+
+.image{
+    display: block;
+    width: 200px;
+}
+
+.img{
+    display: block;
+    border: 1px solid #FF9F91;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.list{
+    display: block;
+    flex: 1;
+    background-color: #B86256;
+}
+
+p{
+    display: block;
+    background-color: #B86256;
+}
+
+h2{
+    flex: 5;
+    font-family: 'Simonetta', cursive;
+    color: #FF9F91;
+    text-align: center;
+    font-size: 1.2cm;
+}
+
+.job, ol{
+    font-family: 'Yeseva One', fantasy;
+    font-weight: 400;
+    font-style: italic;
+    font-size: .8cm;
+    margin-bottom: 2px;
+    letter-spacing: 0.02rem;
+    color: #FF9F91;
+}
+
+div{
+    display: block;
+    align-items: center;
+    padding: 15px;
+}
+
+.desc, p{
+    font-family: 'Yeseva One', fantasy;
+    font-weight: 200;
+    font-size: .4cm;
+    margin-bottom: 2px;
+    letter-spacing: 0.02rem;
+    color: #FF9F91;
+}
+
+.respons, ul{
+    font-family: 'Yeseva One', fantasy;
+    font-weight: 200;
+    font-size: .4cm;
+    margin-bottom: 2px;
+    letter-spacing: 0.02rem;
+    color: #FF9F91;
+}
+
+ol{
+    list-style-type: decimal;
+}
+
+
+li{
+    text-align: -webkit-match-parent;
+}
+

@@ -44,10 +44,12 @@ h1 {
 
 .container{
     min-width: 960px;
+    display: flex;
 }
 
 .image{
     display: block;
+    width: 200px;
     border: 1px solid, #FF9F91;
     border-radius: 25px;
     padding: 4px;
@@ -55,6 +57,7 @@ h1 {
 
 .list{
     display: block;
+    flex: 1;
     background-color: #B86256;
 }
 

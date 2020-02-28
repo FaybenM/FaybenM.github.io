@@ -23,6 +23,7 @@ header{
     flex-flow: row wrap;
     background-color:#394D43;
     padding: 15px;
+    width: 100%;
 }
 
 h1 {
@@ -59,6 +60,7 @@ h1 {
     display: block;
     flex: 1;
     background-color: #B86256;
+    width: 10%;
 }
 
 p{

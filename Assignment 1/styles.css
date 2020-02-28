@@ -51,11 +51,20 @@ h1 {
 }
 
 h2{
-
+    flex: 5;
+    text-transform: uppercase;
+    font-family: 'Simonetta', cursive;
+    color: #8970B5;
+    text-align: center;
 }
 
 .job{
-
+    font-family: fantasy;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.2cm;
+    margin-bottom: 2px;
+    letter-spacing: 0.02rem;
 }
 
 div{
@@ -75,7 +84,7 @@ div{
 }
 
 ol{
-
+    list-style-type: decimal;
 }
 
 ul{
@@ -83,5 +92,5 @@ ul{
 }
 
 li{
-
+    text-align: -webkit-match-parent;
 }

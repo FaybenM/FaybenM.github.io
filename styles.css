@@ -49,14 +49,13 @@ h1 {
 
 .image{
     display: block;
-    /*width: 200px;*/
+    width: 1.54px;
 }
 
 .img{
     padding: 1px;
     border: 1px solid #FF9F91;
     border-radius: 4px 4px 4px 4px;
-    width: 1.54px;
 }
 
 .list{

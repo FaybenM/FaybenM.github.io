@@ -42,11 +42,13 @@ h1 {
     min-width: 960px;
 }
 
-.image{
-
+.image, p{
+    border: 1px;
+    border-radius: 25px;
+    padding: 4px;
 }
 
-.list{
+.list, p{
     display: block;
     background-color: #B05353;
 }
@@ -73,7 +75,7 @@ div{
     display: block;
 }
 
-.desc{
+.desc, p{
     font-family: 'Yeseva One', fantasy;
     font-weight: 200;
     font-size: .9cm;

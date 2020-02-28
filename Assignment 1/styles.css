@@ -18,7 +18,7 @@ body {
   /* || header layout */
   
 header{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     display: flex;
     flex-flow: row wrap;
     background-color:#2D2D5E;

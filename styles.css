@@ -53,6 +53,7 @@ h1 {
 }
 
 .img{
+    border-image-width: auto;
     border: 1px solid #FF9F91;
     border-radius: 4px 4px 4px 4px;
 }

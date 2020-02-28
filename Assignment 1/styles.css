@@ -55,17 +55,17 @@ h1 {
 
 h2{
     flex: 5;
-    text-transform: uppercase;
     font-family: 'Simonetta', cursive;
     color: #BD7757;
     text-align: center;
+    font-size: 1.2cm;
 }
 
 .job{
     font-family: 'Yeseva One', fantasy;
     font-weight: 400;
     font-style: italic;
-    font-size: 1.2cm;
+    font-size: .8cm;
     margin-bottom: 2px;
     letter-spacing: 0.02rem;
     color: #BD7757;
@@ -78,7 +78,7 @@ div{
 .desc, p{
     font-family: 'Yeseva One', fantasy;
     font-weight: 200;
-    font-size: .9cm;
+    font-size: .4cm;
     margin-bottom: 2px;
     letter-spacing: 0.02rem;
     color: #BD7757;
@@ -87,7 +87,7 @@ div{
 .respons{
     font-family: 'Yeseva One', fantasy;
     font-weight: 200;
-    font-size: .9cm;
+    font-size: .4cm;
     margin-bottom: 2px;
     letter-spacing: 0.02rem;
     color: #BD7757;
@@ -104,3 +104,4 @@ ul{
 li{
     text-align: -webkit-match-parent;
 }
+

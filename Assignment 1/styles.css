@@ -7,12 +7,12 @@ html, body {
   
 html {
     font-size: 10px;
-    background-color:#334059;
+    background-color:#53573F;
 }
 
 body {
     width: 10%;
-    /*    min-width: 800px;*/
+    /*    min-width: 1000px;*/
     margin: 0 auto;
   }
   /* || header layout */
@@ -28,7 +28,7 @@ h1 {
     flex: 5;
     text-transform: uppercase;
     font-family: 'Simonetta', cursive;
-    color: #8970B5;
+    color: #BAA956;
     text-align: left;
 }
 

@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    width: 10%;
+    width: 100%;
     min-width: 1000px;
     margin: 0 auto;
   }
@@ -21,7 +21,7 @@ header{
     margin-bottom: 10px;
     display: flex;
     flex-flow: row wrap;
-    background-color:#2D2D5E;
+    background-color:#B89256;
 }
 
 h1 {
@@ -43,6 +43,7 @@ h1 {
 }
 
 .image, p{
+    display: block;
     border: 1px;
     border-radius: 25px;
     padding: 4px;

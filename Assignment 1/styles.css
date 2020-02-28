@@ -74,7 +74,7 @@ h2{
     font-size: 1.2cm;
 }
 
-.job{
+.job, ol{
     font-family: 'Yeseva One', fantasy;
     font-weight: 400;
     font-style: italic;
@@ -99,7 +99,7 @@ div{
     color: #FF9F91;
 }
 
-.respons{
+.respons, ul{
     font-family: 'Yeseva One', fantasy;
     font-weight: 200;
     font-size: .4cm;
@@ -112,9 +112,6 @@ ol{
     list-style-type: decimal;
 }
 
-ul{
-    list-style-type: decimal;
-}
 
 li{
     text-align: -webkit-match-parent;

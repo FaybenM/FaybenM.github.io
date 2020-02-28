@@ -50,9 +50,9 @@ h1 {
 .image{
     display: block;
     width: 200px;
-    border: 1px solid, #FF9F91;
-    border-radius: 25px;
-    padding: 4px;
+    border: 1px solid #FF9F91;
+    border-radius: 4px 4px 4px 4px;
+    padding: 20px;
 }
 
 .list{

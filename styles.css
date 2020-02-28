@@ -53,7 +53,7 @@ h1 {
 }
 
 .img{
-    width: 4px;
+    padding: 1px;
     border: 1px solid #FF9F91;
     border-radius: 4px 4px 4px 4px;
 }
@@ -62,6 +62,7 @@ h1 {
     display: block;
     flex: 1;
     background-color: #B86256;
+    border: 5px dashed #FF9F91;
 }
 
 p{

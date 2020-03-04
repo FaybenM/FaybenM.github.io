@@ -1,6 +1,6 @@
 //image changer
 
-let myImage = document.querySelector('img');
+let myImage = document.querySelector('h1');
 
 myImage.onclick = function() {
   let mySrc = myImage.getAttribute('src');

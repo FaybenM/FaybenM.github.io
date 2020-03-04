@@ -13,14 +13,6 @@
           Click me to make a change
         </button>
         <div class="content">
-          <p>
-           My name has 10 characters
-          </p>
-          <p>
-          The third character in my name is Y
-          <br>
-          amo
-          </p>
         </div>
         <div class="footer"></div>
       </div>
@@ -30,6 +22,20 @@
         const content = document.querySelector(".content");
         content.innerHTML = "Hello world";
       }
+      var par = document.createElement("p");
+      var node = document.createTextNode("My name has 10 characters");
+      par.appendChild(node);
+      var element = document.getElementById("content");
+      element.appendChild(par);
+
+      var par2 = document.createElement("p");
+      var node = document.createTextNode("The third character in my name is Y");
+      var node2 = document.createTextNode("amo");
+      para.appendChild(node);
+      para.appendChild(node2);
+      var element = document.getElementById("content");
+      element.append(par2);
+
     </script>
   </body>
 </html>

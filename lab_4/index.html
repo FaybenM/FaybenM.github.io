@@ -8,11 +8,18 @@
   <body>
     <div class="container">
       <div class="wrapper">
-        <div class="header"></div>
-        <button class="button" onclick="clickMe()">
+        <div class="top">Prof A's Demo Page</div>
+        <button class="activate" onclick="clickMe()">
           Click me to make a change
         </button>
         <div class="content">
+          <p>
+            Retro fam narwhal hoodie meggings viral bushwick yr chartreuse.
+            Chartreuse seitan banh mi selfies, woke ennui venmo craft beer. Air
+            plant tumeric retro DIY iPhone poutine. +1 gastropub chillwave,
+            cronut glossier pork belly tacos poke next level fanny pack vegan
+            jianbing lo-fi.
+          </p>
         </div>
         <div class="footer"></div>
       </div>
@@ -20,7 +27,7 @@
     <script>
       function clickMe() {
         const content = document.querySelector(".content");
-        content.innerHTML = "Hello world";
+        content.innerHTML = "Hello world";     
       }
       var par = document.createElement("p");
       var node = document.createTextNode("My name has 10 characters");
@@ -35,18 +42,18 @@
       element.appendChild(par2);
 
 
-      var heading = document.createElement("header")
+      var heading = document.createElement("header");
       var node = document.createTextNode("Fayben Mamo's Lab 4");
       heading.appendChild(node);
-      var element = document.getElementsByClassName("header");
+      var element = document.getElementsByClassName("top");
       element.appendChild(heading);
 
       var name = "Fayben Mamo's Lab 4";
       var first = name.substring(0,6);
       var last = name.substring(7,11);
       var total = first.length + last.length;
-      var element = document.getElementsByClassName("header");
-      element.appendChild(total)
+      var element = document.getElementsByClassName("top");
+      element.appendChild(total);
       heading.textContent += "" + total;
 
 

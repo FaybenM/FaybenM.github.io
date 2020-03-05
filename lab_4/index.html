@@ -33,8 +33,6 @@
         content.innerHTML = "Hello world"; 
       }
 
-      const content = document.querySelector(".top");
-      content.textContent = "Fayben Mamo's Lab 4" + total;
 
       var name = "Fayben Mamo";
       var first = name.substring(0,6);
@@ -43,6 +41,10 @@
       var third = name.charAt(2);
       var upper = third.toUpperCase();
       var finalChar = name.substring(8,11);
+
+
+      const content = document.querySelector(".top");
+      content.textContent = "Fayben Mamo's Lab 4 " + total;
 
       const p1 = document.querySelector(".p1");
       p1.textContent = "My name has " + total + " characters";

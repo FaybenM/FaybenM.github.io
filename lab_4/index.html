@@ -21,7 +21,7 @@
             jianbing lo-fi.
           </p>
           <p class="p2">
-            
+
           </p>
         </div>
         <div class="footer"></div>
@@ -33,24 +33,31 @@
         content.innerHTML = "Hello world"; 
       }
 
-      const heading = document.querySelector('.top');
-      heading.textContent = "Fayben Mamo's Lab 4";
+      const top = document.querySelector('.top');
+      top.textContent = "Fayben Mamo's Lab 4";
 
-     
-
-    /*  var heading = document.createElement("header");
-      var node = document.createTextNode("Fayben Mamo's Lab 4");
-      heading.appendChild(node);
-      var element = document.getElementsByClassName("top");
-      element.appendChild(heading);*/
-
-      var name = "Fayben Mamo's Lab 4";
+      var name = "Fayben Mamo";
       var first = name.substring(0,6);
       var last = name.substring(7,11);
       var total = first.length + last.length;
-      var element = document.getElementsByClassName(".top");
+      var third = name.charAt(2);
+      var upper = third.toUpperCase;
+      var finalChar = last.substring(8,11);
+
+      const p1 = document.querySelector('.p1');
+      p1.textContent = "My name has " + total + " characters";
+
+      const p2 = document.querySelector('.p2');
+      p2.textContent = "The third chractaer in my name is " + upper;
+      <br />
+      p2.textContent = finalChar;
+     
+
+
+     /* var element = document.getElementsByClassName(".top");
       element.appendChild(total);
      name.textContent += "" + total;
+     */
 
 
     </script>

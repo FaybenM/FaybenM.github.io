@@ -13,6 +13,7 @@
           Click me to make a change
         </button>
         <div class="content">
+        <div class="content2"></div>
           <p class="p1">
             Retro fam narwhal hoodie meggings viral bushwick yr chartreuse.
             Chartreuse seitan banh mi selfies, woke ennui venmo craft beer. Air
@@ -28,12 +29,7 @@
       </div>
     </div>
     <script>
-      function clickMe() {
-        const content = document.querySelector(".content");
-        content.innerHTML = "Hello world"; 
-      }
-
-
+            
       var name = "Fayben Mamo";
       var first = name.substring(0,6);
       var last = name.substring(7,11);
@@ -42,9 +38,13 @@
       var upper = third.toUpperCase();
       var finalChar = name.substring(8,11);
       var linebreak = "<br />";
+      
+      function clickMe() {
+        const content2 = document.querySelector(".content2");
+        content2.innerHTML = "Hello world"; 
 
-      const content = document.querySelector(".top");
-      content.textContent = "Fayben Mamo's Lab 4 " + total;
+      const content1 = document.querySelector(".top");
+      content1.textContent = "Fayben Mamo's Lab 4 " + total;
 
       const p1 = document.querySelector(".p1");
       p1.textContent = "My name has " + total + " characters";
@@ -54,6 +54,9 @@
 
       const par2 = document.querySelector(".par2");
       par2.textContent = finalChar;
+      }
+
+
       
     </script>
   </body>

@@ -21,7 +21,7 @@
             jianbing lo-fi.
           </p>
           <p class="p2">
-
+            
           </p>
         </div>
         <div class="footer"></div>
@@ -41,7 +41,7 @@
       var third = name.charAt(2);
       var upper = third.toUpperCase();
       var finalChar = name.substring(8,11);
-
+      var linebreak = "<br />";
 
       const content = document.querySelector(".top");
       content.textContent = "Fayben Mamo's Lab 4 " + total;
@@ -50,7 +50,8 @@
       p1.textContent = "My name has " + total + " characters";
 
       const p2 = document.querySelector(".p2");
-      p2.textContent = "The third chractaer in my name is " + upper + finalChar;
+      p2.textContent = "The third chractaer in my name is " + upper +
+      document.writeln(linebreak) + finalChar;
 
     </script>
   </body>

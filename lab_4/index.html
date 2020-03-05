@@ -27,19 +27,15 @@
     <script>
       function clickMe() {
         const content = document.querySelector(".content");
-        content.innerHTML = "Hello world";     
+        content.innerHTML = "Hello world"; 
+        <br />   
+        content.innerHTML = "My name has 10 characters"; 
+        <br />
+        content.innerHTML = "The third character in my name is Y"; 
+        <br />
+        content.innerHTML = "amo";  
       }
-      var par = document.createElement(".p");
-      var node = document.createTextNode("My name has 10 characters");
-      par.appendChild(node);
-      var element = document.getElementsByClassName(".content");
-      element.appendChild(par);
 
-      var par2 = document.createElement(".p");
-      var node = document.createTextNode("The third character in my name is Y");
-      par2.appendChild(node);
-      var element = document.getElementsByClassName(".content");
-      element.appendChild(par2);
 
 
       var element = document.getElementsByClassName(".top");

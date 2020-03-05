@@ -33,32 +33,22 @@
         content.innerHTML = "Hello world"; 
       }
 
-      const top = document.querySelector('.top');
-      top.textContent = "Fayben Mamo's Lab 4";
+      const content = document.querySelector(".top");
+      content.textContent = "Fayben Mamo's Lab 4";
 
       var name = "Fayben Mamo";
       var first = name.substring(0,6);
       var last = name.substring(7,11);
       var total = first.length + last.length;
       var third = name.charAt(2);
-      var upper = third.toUpperCase;
-      var finalChar = last.substring(8,11);
+      var upper = third.toUpperCase();
+      var finalChar = name.substring(8,11);
 
-      const p1 = document.querySelector('.p1');
+      const p1 = document.querySelector(".p1");
       p1.textContent = "My name has " + total + " characters";
 
-      const p2 = document.querySelector('.p2');
+      const p2 = document.querySelector(".p2");
       p2.textContent = "The third chractaer in my name is " + upper;
-      <br />
-      p2.textContent = finalChar;
-     
-
-
-     /* var element = document.getElementsByClassName(".top");
-      element.appendChild(total);
-     name.textContent += "" + total;
-     */
-
 
     </script>
   </body>

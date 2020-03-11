@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Test JSON page</title>
+  <title>Fayben's page</title>
   <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 
@@ -10,7 +10,7 @@
   <div class="container">
     <div class="wrapper">
       <div class="header">Fayben's List Of Countries</div>
-      <button class="activate">Click me to replace list
+      <button class="activate" onclick="pressMe()">Click me to replace list
         entries</button>
       <div class="content">
 
@@ -267,13 +267,25 @@
     ]
     console.log("List of countries in the world", countries);
 
-    
-    arrayList.forEach(element => {
-      
-    });
+    function pressMe() {
+    //arrayList.forEach(element => {countries[0].name ++ });
+  	var order=document.createElement('ol');
+	test.setAttribute('class','countries');
 
-    const order = document.querySelector(".content");
-    var list = document.createElement("ol");
+
+	document.body.appendChild(order);
+	order.appendChild(ol);
+
+	for (var i=0; i<array.length; i++){
+
+    var list =document.createElement('li');
+
+    ol.appendChild(li);
+    li.innerHTML=li.innerHTML + array[i];
+    }
+
+
+
   </script>
 </body>
 

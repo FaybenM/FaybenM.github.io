@@ -268,20 +268,18 @@
     console.log("List of countries in the world", countries);
 
     function pressMe() {
-    //arrayList.forEach(element => {countries[0].name ++ });
-  	var order=document.createElement('ol');
-	test.setAttribute('class','countries');
-
-
+    
+  var order = document.createElement('ol');
+	order.setAttribute('class','countries');
+    
 	document.body.appendChild(order);
 	order.appendChild(ol);
-
-	for (var i=0; i<array.length; i++){
-
+    
     var list =document.createElement('li');
-
-    ol.appendChild(li);
-    li.innerHTML=li.innerHTML + array[i];
+    order.appendChild(li);
+    
+    var content1 = document.querySelector(".content");
+    content1.innerHTML = countries;
     }
 
 

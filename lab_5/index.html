@@ -13,7 +13,7 @@
       <button class="activate" onclick="pressMe()">Click me to replace list
         entries</button>
       <div class="content">
-
+        
       </div>
       <div class="footer"></div>
     </div>
@@ -268,20 +268,25 @@
     console.log("List of countries in the world", countries);
 
     function pressMe() {
+    var order = document.createElement("ol");
+	  order.setAttribute('class','countries');
     
-  var order = document.createElement('ol');
-	order.setAttribute('class','countries');
+	  document.body.appendChild(order);
+	  order.appendChild(ol);
     
-	document.body.appendChild(order);
-	order.appendChild(ol);
-    
-    var list =document.createElement('li');
+    var list = document.createElement("li");
     order.appendChild(li);
     
-    var content1 = document.querySelector(".content");
-    content1.innerHTML = countries;
+    var random = countries.map(obj => {
+    var rObj = {}
+    rObj[obj.name] = obj.code
+    return rObj
+   
+    random[Math.floor(Math.random()*25)];
+	
+    document.body.innerHTML = random;
+  
     }
-
 
 
   </script>

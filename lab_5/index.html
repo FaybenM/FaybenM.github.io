@@ -270,6 +270,8 @@
 
     var list = document.getElementById("allListed");
     const places = sessionStorage.setItem("names", JSON.stringify(countries));
+
+
     
     function pressMe() {
       var places = JSON.parse(sessionStorage.getItem("names"));
@@ -283,9 +285,10 @@
         var listed = document.createElement("li");
         var label1 = places[n].code;
         var label2 = places[n].name;
-
         
-        var text = document.createTextNode(label1 + ' ' + label2);
+        var bold = document.createElement('b');
+        
+        var text = document.createTextNode(`<b>${label1}</b> ${label2}`);
         listed.appendChild(text);
         order.appendChild(listed);
         places.splice(n, 1);

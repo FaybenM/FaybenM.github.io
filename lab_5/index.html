@@ -294,6 +294,24 @@
         }
   }
 
+  //log out country in array
+  countries.forEach(m => {
+        console.log(m);
+      });
+      const range = n => {
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+          arr[i] = i;
+        }
+        return arr;
+      };
+
+      let cList = range(25);
+
+      const mod_countries = cList.map(m => {
+        console.log(countries);
+        return `${m.code} ${m.name}`;
+      });
 
   </script>
 </body>

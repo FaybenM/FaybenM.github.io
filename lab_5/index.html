@@ -286,8 +286,8 @@
         var label1 = places[n].code;
         var label2 = places[n].name;
         
-       
-        label1 = '<strong>label1</strong>'; 
+        var bold = document.createElement("strong");
+        label1 = label1.bold();
 
         var text = document.createTextNode(label1 + " " + label2);
         listed.appendChild(text);

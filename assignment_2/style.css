@@ -1,6 +1,7 @@
 h1,h2 {
   font-family: helvetica, arial, sans-serif;
   text-align: center;
+  display: flex;
 }
 
 body {

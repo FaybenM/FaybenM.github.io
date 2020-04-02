@@ -11,7 +11,7 @@ for(var i = 1; i <= 5; i++) {
 
   
   const addPic = document.createElement('img');
-  addPic.setAttribute('src', `pic${i}.jpg`);
+  addPic.setAttribute('src', 'pic' + i + '.jpg');
   thumbBar.appendChild(addPic);
   addPic.onclick = function(clickImg) {
     displayedImage.src = clickImg.target.src;

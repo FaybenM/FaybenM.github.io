@@ -7,19 +7,12 @@ const overlay = document.querySelector('.overlay');
 
 /* Looping through images */
 
-for(var i = 1; i <= 5; i++) {
-    const newImage = document.createElement('img');
-    newImage.setAttribute('src', 'images/pic' + i + '.jpg');
-    thumbBar.appendChild(newImage);
-    newImage.onclick = function(e) {
-      displayedImage.src = e.target.src;
-    }
-  }
+
   
   /* Wiring up the Darken/Lighten button */
   
   function Color(){
-    const classButton = btn.getAttribute('class');
+    const classButton = btn.getAttribute("class");
     btn.setAttribute("class", "light");
     btn.innerText = "Lighten";
     overlay.style.backgroundColor = "rgba(0,0,0,0.5)";

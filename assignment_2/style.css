@@ -1,7 +1,6 @@
 h1,h2 {
   font-family: helvetica, arial, sans-serif;
   text-align: center;
-  display: flex;
 }
 
 body {
@@ -12,6 +11,7 @@ body {
 .full-img {
   position: relative;
   display: block;
+  margin: auto;
   width: 640px;
   height: 480px;
 }
@@ -37,8 +37,15 @@ button {
 }
 
 .thumb-bar img {
-  display: block;
+  display: flex;
+  align-items: center;
+  height: 100px;
   width: 20%;
-  float: left;
+  float: inline-start;
   cursor: pointer;
+}
+
+.displayed-img {
+  width: 640px;
+  height: 480px;
 }

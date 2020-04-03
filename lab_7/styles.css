@@ -1,10 +1,11 @@
 /* Set document default styles for text */
 body {
     line-height: 1.6;
-    font-size: 18px;
+    font-size: 20px;    /*one change*/
+    font-weight: bolder; /*second change*/
     color: #444;
     padding: 0 10px;
-    background: #eee;
+    background: rgb(197, 157, 157); /*third change*/
   }
   
   h1,
@@ -52,7 +53,7 @@ body {
     margin: 20px 50px;
     padding: 0 20px;
     min-height: 75px;
-    background: lightblue;
+    background: lightsteelblue; /*fourth change*/
     display: flex;
     align-items: center;
     justify-content: center;

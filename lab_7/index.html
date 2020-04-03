@@ -28,7 +28,13 @@
     </div>
 
     <script>
-    	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+    var mymap = L.map('mapid').setView([54.5260, 105.2551], 8);
+        
+    const food = [(39.095491, -76.838165), (38.687531, -76.980676), 
+    (38.983881, -76.729269)
+    ]
+    
+
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     maxZoom: 18,
@@ -40,20 +46,18 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomOffset: -1
 }).addTo(mymap);
 
-L.marker([51.5, -0.09]).addTo(mymap)
-    .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+//4 markers
+    L.marker([38.9860, -76.9451]).addTo(mymap)
+        .bindPopup("<b>Mckeldin Library</b>").openPopup();
 
-L.circle([51.508, -0.11], 500, {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5
-}).addTo(mymap).bindPopup("I am a circle.");
+    L.marker([39.095491, -76.838165]).addTo(mymap)
+        .bindPopup("<b>LAUREL DUTCH MARKET - SAMMIE'S PRODUCE</b>").openPopup();
 
-L.polygon([
-    [51.509, -0.08],
-    [51.503, -0.06],
-    [51.51, -0.047]
-]).addTo(mymap).bindPopup("I am a polygon.");
+    L.marker([38.687531, -76.980676]).addTo(mymap)
+        .bindPopup("<b>ACCOKEEK ACADEMY</b>").openPopup();
+
+    L.marker([38.983881, -76.729269]).addTo(mymap)
+        .bindPopup("<b>PAPA JOHNS 728</b>").openPopup();
 
 
 var popup = L.popup();
@@ -66,6 +70,10 @@ function onMapClick(e) {
 }
 
 mymap.on('click', onMapClick);
+
+//set to mobile resolution
+window.screen.availHeight;
+window.screen.availWidth;
 
     </script>
   </body>

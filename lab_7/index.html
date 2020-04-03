@@ -47,8 +47,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(mymap);
 
 //4 markers
-    L.marker([38.9860, -76.9451]).addTo(mymap)
-        .bindPopup("<b>Mckeldin Library</b>").openPopup();
 
     L.marker([39.095491, -76.838165]).addTo(mymap)
         .bindPopup("<b>LAUREL DUTCH MARKET - SAMMIE'S PRODUCE</b>").openPopup();
@@ -58,6 +56,9 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
     L.marker([38.983881, -76.729269]).addTo(mymap)
         .bindPopup("<b>PAPA JOHNS 728</b>").openPopup();
+
+    L.marker([38.9860, -76.9451]).addTo(mymap)
+        .bindPopup("<b>Mckeldin Library</b>").openPopup();
 
 
 var popup = L.popup();

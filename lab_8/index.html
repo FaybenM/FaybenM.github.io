@@ -16,62 +16,65 @@
       </div>
     </div>
     <script>
-      //I followed along with the lecture in order to help do this lab
-      fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json')
-        .then((response) => response.json()) // this is an "implicit return" - we're returning the results of the Fetch request to the next step.
-        .then((data) => { // this is an explicit return. If I want my information to go further, I'll need to use the "return" keyword before the brackets close
+  fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json") 
+        .then((response) => {
+        console.log("response information", response);
+          return response;
+        })
+        .then((data) => data.json()) 
+        .then((data) => {
+          
           console.log(data);
-          const clearEmptyData = data.filter((f) => f.geocoded_column_1);
-          const refined = clearEmptyData .map((m) => ({
-            category: m.category,
-            name: n.name,
-            latlong: m.geocoded_column_1.coordinates,
+          const wholeData = data.filter((a) => a.geocoded_column_1);
+          const categories = wholeData.map((b) => ({
+            cat: b.category,
           }));
-          // return data; // <- this will pass the data to the next "then" statement when I'm ready.
-          return refined;
+          console.log(categories);
+          return categories;
         })
+
         .then((data) => {
-          return data.reduce((c, current) =>{
-            if(!c[current.category]) {
-              c[current.category] = [];
+          return data.reduce((cat, category) => {
+            if (!cat[category.cat]) {
+              cat[category.cat] = 1;
+            } else {
+              cat[category.cat]++;
             }
-              c[current.category].push(current);
-              return c;
-            }, {});
+            return cat;
+          }, {});
         })
         .then((data) => {
-          console.log('new data', data);
-          const reformattedData = Object.entries(data).map((m,i) => {
-            console.log(m);
-            return{
-              y: m[1].length,
+          let chartData = Object.entries(data).map((m, i) => {
+            return {
               label: m[0],
+              y: m[1],
             };
           });
-          return reformattedData;
+
+          return chartData;
         })
-
-        .then((results) => {
+        .then((chartData) => {
+         
           let content = document.getElementsByClassName("content")[0];
-          content.innerHTML = "";
+          content.innerHTML = " ";
+          
 
-          console.log(results);
-          const chart = new CanvasJS.Chart(content, {
-           animationEnabled: true,
-           height: 480,
-           width: 780,
-           
-           title: {
-             text: "Food Categories in PG County",
-           },
-           data: [
-             {
-               type: "line",
-               dataPoints: results,
-             },
-           ],
-         });
-         chart.render();
+          let chart = new CanvasJS.Chart(content, {
+            animationEnabled: true,
+            height: 480,
+            width: 800,
+            
+            title: {
+              text: "Food Categories in PG County",
+            },
+            data: [
+              {
+                type: "pie",
+                dataPoints: chartData,
+              },
+            ],
+          });
+          chart.render();
         });
     </script> 
   </body>

@@ -70,6 +70,8 @@ body {
     border: 2px dotted #444;
     align-self: flex-start;
     width: 85%;
+    flex-grow: 2;
+    flex: 0 0 500px;
     padding: 10px;
     overflow-wrap: break-word;
     margin: 25px 50px;

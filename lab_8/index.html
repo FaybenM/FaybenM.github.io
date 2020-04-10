@@ -10,13 +10,13 @@
       <div class="wrapper">
         <div class="header">Frontend Libraries: Charts Lab</div>
         <div class="content">
-          When your lab is done, this should be replaced with a useful chart full of food data.
+          
         </div>
         <div class="footer">Let's eat out in the future!</div>
       </div>
     </div>
-    //I followed along with the lecture in order to help do this lab
     <script>
+      //I followed along with the lecture in order to help do this lab
       fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json')
         .then((response) => response.json()) // this is an "implicit return" - we're returning the results of the Fetch request to the next step.
         .then((data) => { // this is an explicit return. If I want my information to go further, I'll need to use the "return" keyword before the brackets close
@@ -52,6 +52,9 @@
         })
 
         .then((results) => {
+          let content = document.getElementsByClassName("content")[0];
+          content.innerHTML = "";
+
           console.log(results);
           const chart = new CanvasJS.Chart(content, {
            animationEnabled: true,
@@ -63,7 +66,7 @@
            },
            data: [
              {
-               type: "pie",
+               type: "line",
                dataPoints: results,
              },
            ],

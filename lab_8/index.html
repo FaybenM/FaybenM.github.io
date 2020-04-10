@@ -15,14 +15,61 @@
         <div class="footer">Let's eat out in the future!</div>
       </div>
     </div>
+    //I followed along with the lecture in order to help do this lab
     <script>
-      //old script fetch('./countries.json') // replace this with the food safety data set
       fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json')
-        .then((data) => data.json()) // this is an "implicit return" - we're returning the results of the Fetch request to the next step.
+        .then((response) => response.json()) // this is an "implicit return" - we're returning the results of the Fetch request to the next step.
         .then((data) => { // this is an explicit return. If I want my information to go further, I'll need to use the "return" keyword before the brackets close
           console.log(data);
+          const clearEmptyData = data.filter((f) => f.geocoded_column_1);
+          const refined = clearEmptyData .map((m) => ({
+            category: m.category,
+            name: n.name,
+            latlong: m.geocoded_column_1.coordinates,
+          }));
           // return data; // <- this will pass the data to the next "then" statement when I'm ready.
+          return refined;
         })
-    </script>
+        .then((data) => {
+          return data.reduce((c, current) =>{
+            if(!c[current.category]) {
+              c[current.category] = [];
+            }
+              c[current.category].push(current);
+              return c;
+            }, {});
+        })
+        .then((data) => {
+          console.log('new data', data);
+          const reformattedData = Object.entries(data).map((m,i) => {
+            console.log(m);
+            return{
+              y: m[1].length,
+              label: m[0],
+            };
+          });
+          return reformattedData;
+        })
+
+        .then((results) => {
+          console.log(results);
+          const chart = new CanvasJS.Chart(content, {
+           animationEnabled: true,
+           height: 480,
+           width: 780,
+           
+           title: {
+             text: "Food Categories in PG County",
+           },
+           data: [
+             {
+               type: "pie",
+               dataPoints: results,
+             },
+           ],
+         });
+         chart.render();
+        });
+    </script> 
   </body>
 </html>

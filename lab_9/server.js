@@ -22,13 +22,50 @@ app.use(express.static('public'));
 
 
 function processDataForFrontEnd(req, res) {
-  const baseURL = ''; // Enter the URL for the data you would like to retrieve here
+  const baseURL = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json'; // Enter the URL for the data you would like to retrieve here
 
   // Your Fetch API call starts here
   // Note that at no point do you "return" anything from this function -
   // it instead handles returning data to your front end at line 34.
     fetch(baseURL)
-      .then((r) => r.json())
+      .then((results) => results.json())
+      //process data
+      
+      .then((data) => data.json()) 
+        .then((data) => {
+          
+          console.log(data);
+          const wholeData = data.filter((a) => a.geocoded_column_1);
+          const categories = wholeData.map((b) => ({
+            cat: b.category,
+          }));
+          console.log(categories);
+          return categories;
+        })
+
+        .then((data) => {
+          return data.reduce((cat, category) => {
+            if (!cat[category.cat]) {
+              cat[category.cat] = 1;
+            } else {
+              cat[category.cat]++;
+            }
+            return cat;
+          }, {});
+        })
+        .then((data) => {
+          let chartData = Object.entries(data).map((m, i) => {
+            return {
+              label: m[0],
+              y: m[1],
+            };
+          });
+
+          return chartData;
+        })
+
+ 
+
       .then((data) => {
         console.log(data);
         res.send({ data: data }); // here's where we return data to the front end

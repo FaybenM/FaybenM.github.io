@@ -22,6 +22,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+//got from lecture recording
+async function writeUser(username, settings) {
+  const db = await open(settings);
+  await db.exec("CREATE TABLE IF NOT EXISTS user (name)");
+  await db.exec('INSERT INTO user VALUES ("${USERNAME}")');
+  const result = await db.each("SELECT * FROM user");
+  console.log("EXPECTED RESULT", result);
+  return result;
+}
+
+
 function processDataForFrontEnd(req, res) {
   const baseURL = ""; // Enter the URL for the data you would like to retrieve here
 

@@ -6,7 +6,17 @@
     <title>Speed Cameras</title>
     <link rel="stylesheet" href="search_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""
+  ></script>
   </head>
 
   <body>
@@ -60,10 +70,53 @@
         <article>
             <div class="wrapper"><p>Search a location and select a filter to get 
                 how many speeding cameras there are!
-            </p></div>
+            </p>
+            <div class="content">
+                <div id="mapid" style="width: 600px; height: 400px;"></div>
+            </div></div>
             <p class="describe">Location Description...</p>
           </article>
     </main>
+    <script>
+      // when developing the map I did use the leaflet example to help write my code
+      var mymap = L.map('mapid').setView([54.5260, 105.2551], 8);
+          
+      const food = [(39.095491, -76.838165), (38.687531, -76.980676), 
+      (38.983881, -76.729269)
+      ]
+      
+  
+  
+  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+          '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+          'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1
+  }).addTo(mymap);
+  
+  //4 markers
+  
+      L.marker([39.095491, -76.838165]).addTo(mymap)
+          .bindPopup("<b>LAUREL DUTCH MARKET - SAMMIE'S PRODUCE</b>").openPopup();
+  
+      L.marker([38.687531, -76.980676]).addTo(mymap)
+          .bindPopup("<b>ACCOKEEK ACADEMY</b>").openPopup();
+  
+      L.marker([38.983881, -76.729269]).addTo(mymap)
+          .bindPopup("<b>PAPA JOHNS 728</b>").openPopup();
+  
+      L.marker([38.9860, -76.9451]).addTo(mymap)
+          .bindPopup("<b>Mckeldin Library</b>").openPopup();
+  
 
+  
+  //set to mobile resolution
+  window.screen.availHeight;
+  window.screen.availWidth;
+  
+      </script>
   </body>
 </html>

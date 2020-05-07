@@ -31,9 +31,9 @@
 
       <ul>
         <li><a href="search.html">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="data.html">Data</a></li>
-        <li><a href="#">Documentation</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
       </ul>
 
     </nav>
@@ -78,15 +78,9 @@
           </article>
     </main>
     <script>
-      // when developing the map I did use the leaflet example to help write my code
-      var mymap = L.map('mapid').setView([54.5260, 105.2551], 8);
-          
-      const food = [(39.095491, -76.838165), (38.687531, -76.980676), 
-      (38.983881, -76.729269)
-      ]
+     
+      var mymap = L.map('mapid').setView([38.83, -76.86], 10);
       
-  
-  
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
       maxZoom: 18,
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -96,21 +90,77 @@
       tileSize: 512,
       zoomOffset: -1
   }).addTo(mymap);
-  
-  //4 markers
-  
-      L.marker([39.095491, -76.838165]).addTo(mymap)
-          .bindPopup("<b>LAUREL DUTCH MARKET - SAMMIE'S PRODUCE</b>").openPopup();
-  
-      L.marker([38.687531, -76.980676]).addTo(mymap)
-          .bindPopup("<b>ACCOKEEK ACADEMY</b>").openPopup();
-  
-      L.marker([38.983881, -76.729269]).addTo(mymap)
-          .bindPopup("<b>PAPA JOHNS 728</b>").openPopup();
-  
-      L.marker([38.9860, -76.9451]).addTo(mymap)
-          .bindPopup("<b>Mckeldin Library</b>").openPopup();
-  
+  //markers for all the speed cameras
+      L.marker([39.10491100, -76.86664100]).addTo(mymap);
+      L.marker([38.80328000, -76.99046000]).addTo(mymap);
+      L.marker([38.84431100, -76.88702000]).addTo(mymap);
+      L.marker([38.88809300, -76.89848000]).addTo(mymap);
+      L.marker([39.03525200, -76.91856900]).addTo(mymap);
+      L.marker([38.95259300, -76.94206900]).addTo(mymap); 
+      L.marker([38.95259300, -76.94206900]).addTo(mymap); 
+      L.marker([39.10491100, -76.86664100]).addTo(mymap);
+      L.marker([38.80328000, -76.99046000]).addTo(mymap);
+      L.marker([39.10491100, -76.86664100]).addTo(mymap);
+      L.marker([39.03525200, -76.91856900]).addTo(mymap);
+      L.marker([38.81850100, -76.75007000]).addTo(mymap);
+      L.marker([38.81850100, -76.75007000]).addTo(mymap);
+      L.marker([38.84802200, -76.92309700]).addTo(mymap);
+      L.marker([38.93143200, -76.89015900]).addTo(mymap);
+      L.marker([39.00374400, -76.96701700]).addTo(mymap);
+      L.marker([38.81850100, -76.75007000]).addTo(mymap);
+      L.marker([38.96191400, -76.86234000]).addTo(mymap);
+      L.marker([38.73946400, -77.00152700]).addTo(mymap);
+      L.marker([38.84431100, -76.88702000]).addTo(mymap);
+      L.marker([39.10491100, -76.86664100]).addTo(mymap);
+      L.marker([39.10491100, -76.86664100]).addTo(mymap);
+      L.marker([38.87954400, -76.82648100]).addTo(mymap);
+      L.marker([38.73946400, -77.00152700]).addTo(mymap);
+      L.marker([38.87954400, -76.82648100]).addTo(mymap);
+      L.marker([38.95259300, -76.94206900]).addTo(mymap);
+      L.marker([38.70447100, -76.88234800]).addTo(mymap);
+      L.marker([38.81850100, -76.75007000]).addTo(mymap);
+      L.marker([38.93143200, -76.89015900]).addTo(mymap);
+      L.marker([38.95259300, -76.94206900]).addTo(mymap);
+      L.marker([39.03525200, -76.91856900]).addTo(mymap);
+      L.marker([38.73946400, -77.00152700]).addTo(mymap);
+      L.marker([38.88531000, -76.91362000]).addTo(mymap);
+      L.marker([38.95259300, -76.94206900]).addTo(mymap);
+      L.marker([38.84802200, -76.92309700]).addTo(mymap);
+      L.marker([38.88531000, -76.91362000]).addTo(mymap);
+      L.marker([38.86218000, -76.88245100]).addTo(mymap);
+      L.marker([38.88531000, -76.91362000]).addTo(mymap);
+      L.marker([39.10491100, -76.86664100]).addTo(mymap);
+      L.marker([38.76133400, -76.91533900]).addTo(mymap);
+      L.marker([38.93143200, -76.89015900]).addTo(mymap);
+      L.marker([38.96191400, -76.86234000]).addTo(mymap);
+      L.marker([38.82383400, -76.94855900]).addTo(mymap);
+      L.marker([38.87954400, -76.82648100]).addTo(mymap);
+      L.marker([38.95259300, -76.94206900]).addTo(mymap);
+      L.marker([38.88531000, -76.91362000]).addTo(mymap);
+      L.marker([38.84802200, -76.92309700]).addTo(mymap);
+      L.marker([38.80328000, -76.99046000]).addTo(mymap);
+      L.marker([38.93747000, -76.83862900]).addTo(mymap);
+      L.marker([38.93143200, -76.89015900]).addTo(mymap);
+      L.marker([38.93143200, -76.89015900]).addTo(mymap);
+      L.marker([38.70447100, -76.88234800]).addTo(mymap);
+      L.marker([38.84802200, -76.92309700]).addTo(mymap);
+      L.marker([38.73946400, -77.00152700]).addTo(mymap);
+      L.marker([39.10491100, -76.86664100]).addTo(mymap);
+      L.marker([38.96097100, -76.74046700]).addTo(mymap);
+      L.marker([38.93143200, -76.89015900]).addTo(mymap);
+      L.marker([38.80328000, -76.99046000]).addTo(mymap);
+      L.marker([39.03525200, -76.91856900]).addTo(mymap);
+      L.marker([38.95259300, -76.94206900]).addTo(mymap);
+      L.marker([38.95259300, -76.94206900]).addTo(mymap);
+      L.marker([38.93143200, -76.89015900]).addTo(mymap);
+      L.marker([38.80328000, -76.99046000]).addTo(mymap);
+      L.marker([38.96097100, -76.74046700]).addTo(mymap);
+      L.marker([38.67073400, -77.02305000]).addTo(mymap);
+      L.marker([38.93747000, -76.83862900]).addTo(mymap);
+      L.marker([39.03525200, -76.91856900]).addTo(mymap);
+      L.marker([39.03525200, -76.91856900]).addTo(mymap);
+      L.marker([38.80328000, -76.99046000]).addTo(mymap);
+      L.marker([38.81850100, -76.75007000]).addTo(mymap);
 
   
   //set to mobile resolution
